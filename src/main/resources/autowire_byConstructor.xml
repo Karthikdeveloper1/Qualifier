@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="specification" class="com.autowire_byConstructor.Specification">
+        <property name="make" value="Benz"/>
+        <property name="model" value="AMG G63"/>
+    </bean>
+    <bean id="myCar" class="com.autowire_byConstructor.Car" autowire="constructor" />
+    <!-- autowire ByType means it looks for the class name  that we provide
+        in the path(Specification) if the Specification class is there then it will look for Constructor in that class
+       if Constructor is there  it will print output otherwise it give error   -->
+
+
+
+</beans>
